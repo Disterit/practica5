@@ -1,0 +1,41 @@
+{
+  "127.0.0.1": {
+    "10:59": {
+      "Sum": 2,
+      "https://music.yandex.ru/home": {
+        "Sum": 2
+      }
+    },
+    "19:47": {
+      "Sum": 1,
+      "https://www.youtube.com/": {
+        "Sum": 1
+      }
+    },
+    "19:48": {
+      "Sum": 5,
+      "https://vc.ru/u/1389654-machine-learning/695828-golang-stroki-i-runy": {
+        "Sum": 5
+      }
+    },
+    "22:43": {
+      "Sum": 1,
+      "https://www.youtube.com/": {
+        "Sum": 1
+      }
+    },
+    "23:30": {
+      "Sum": 28,
+      "https://vk.com/im": {
+        "Sum": 9
+      },
+      "https://www.pathofexile.com/trade/search/Scourge": {
+        "Sum": 10
+      },
+      "https://www.youtube.com/": {
+        "Sum": 9
+      }
+    },
+    "Sum": 37
+  }
+}

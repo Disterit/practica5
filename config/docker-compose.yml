@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  db:
+    build: C:/Users/Levch/GolandProjects/labaNosql/config
+    command: go run /db/main.go
+    volumes:
+      - .:/db
+    ports:
+      - 6379:6379
+  stat:
+    build:
+      context: C:/Users/Levch/GolandProjects/labaNosql/stat
+    working_dir: /stat
+    command: go run /stat/DataConnections.go
+    ports:
+      - 1337:1337
+  web:
+    build:
+      context: C:/Users/Levch/PycharmProjects/Practica3/config
+    working_dir: /code
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
