@@ -1,0 +1,38 @@
+<!-- report.html -->
+{% extends '_base.html' %}
+
+{% block title %}Report{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1>Отчет</h1>
+            <div class="report-container">
+                <ul>
+                    {% for key, value in report_data.items %}
+                        <li>
+                            <strong>{{ key }}</strong>
+                            <ul>
+                                {% for inner_key, inner_value in value.items %}
+                                    {% if inner_key != 'Sum' %}
+                                        <li>
+                                            <strong>{{ inner_key }}:</strong>
+                                            {% for sub_key, sub_value in inner_value.items %}
+                                                {% if sub_key != 'Sum' %}
+                                                    <ul>
+                                                        <li><strong>{{ sub_key }}:</strong> {{ sub_value }}</li>
+                                                    </ul>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                                <li><strong>Sum:</strong> {{ value.Sum }}</li>
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

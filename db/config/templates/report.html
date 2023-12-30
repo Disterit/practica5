@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Get reporter</h1>
+        <p class="lead">Выберите один из вариантов иерархии: SourceIP TimeInterval URL </p>
+        <hr class="my-4">
+        <form action="{% url 'create_report' %}" method="get">
+            <input name="report" type="text">
+            <button type="submit" class="btn btn-primary btn-sm">Создать отчёт</button>
+        </form>
+    </div>
+{% endblock %}

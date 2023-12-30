@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to link shorter</h1>
+        <p class="lead">shorten your link</p>
+        <hr class="my-4">
+        <form action="{% url 'requestURL' %}" method="get">
+            <input name="url" type="text">
+            <button type="submit" class="btn btn-primary btn-sm" action>Сократить ссылку</button>
+        </form>
+        {% if shortURL %}
+            <p><span style="font-weight: bold;">Сокращенная ссылка:</span> <a href="{{ shortURL }}" style="text-decoration: none; color: #007BFF;">{{ shortURL }}</a></p>
+        {% endif %}
+    </div>
+{% endblock %}
